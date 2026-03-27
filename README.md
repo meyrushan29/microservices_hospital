@@ -8,17 +8,17 @@
 
 ```
 hospital-microservices/
-├── patient-service/        # Member 1 — Patient CRUD
+├── patient-service/        # Meyrushan N — Patient CRUD
 │   └── main.py
-├── doctor-service/         # Member 2 — Doctor CRUD
+├── doctor-service/         # Laxshika S — Doctor CRUD
 │   └── main.py
-├── appointment-service/    # Member 3 — Appointment CRUD
+├── appointment-service/    # Laksopan R — Appointment CRUD
 │   └── main.py
-├── pharmacy-service/       # Member 4 — Medicine & Prescriptions
+├── pharmacy-service/       # Viththakan N — Medicine & Prescriptions
 │   └── main.py
-├── billing-service/        # Member 5 — Billing & Payments
+├── billing-service/        # Hariyah L — Billing & Payments
 │   └── main.py
-├── lab-service/            # Member 6 — Lab Tests & Results
+├── lab-service/            # Nilakshan V — Lab Tests & Results
 │   └── main.py
 ├── api-gateway/            # API Gateway (routes all traffic)
 │   └── main.py
@@ -71,10 +71,10 @@ bash start_all.sh
 
 | Member | Service | Port |
 |---|---|---|
-| Member 1 | Patient Service | 8001 |
-| Member 2 | Doctor Service | 8002 |
-| Member 3 | Appointment Service | 8003 |
-| Member 4 | Pharmacy Service | 8004 |
-| Member 5 | Billing Service | 8005 |
-| Member 6 | Lab Service | 8006 |
+| Meyrushan N | Patient Service | 8001 |
+| Laxshika S | Doctor Service | 8002 |
+| Laksopan R | Appointment Service | 8003 |
+| Viththakan N | Pharmacy Service | 8004 |
+| Hariyah L  | Billing Service | 8005 |
+| Nilakshan V | Lab Service | 8006 |
 | All | API Gateway | 8000 |
