@@ -38,7 +38,38 @@ pip install -r requirements.txt
 # 2. Start all services (from project root)
 bash start_all.sh
 ```
+# 2. Start all services (from project root)
+.\start_all.ps1
 
+---
+
+## 🔐 Security Features (NEW)
+
+This system now includes **JWT Authentication** and **Role-Based Access Control (RBAC)**.
+
+### Quick Start with Security
+
+1. **Get JWT Token:**
+   ```bash
+   curl -X POST http://localhost:8000/authenticate \
+     -H "Content-Type: application/json" \
+     -d '{"username":"admin","password":"admin123"}'
+   ```
+
+2. **Use Token in Requests:**
+   ```bash
+   curl -H "Authorization: Bearer <token>" \
+     http://localhost:8000/patients
+   ```
+
+### Test Users
+| Username | Password | Role |
+|---|---|---|
+| admin | admin123 | Full access |
+| doctor | doctor123 | Medical operations |
+| patient | patient123 | Limited access |
+
+**See [SECURITY.md](./hospital-microservices/SECURITY.md) for detailed security documentation.**
 ---
 
 ## 🌐 Access URLs
