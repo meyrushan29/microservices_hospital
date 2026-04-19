@@ -24,6 +24,7 @@ class DoctorCreate(BaseModel):
     available: bool
     experience_years: int
 
+
 @app.get("/", tags=["Health"])
 def health():
     return {"service": "Doctor Service", "status": "running", "port": 8002}
@@ -53,6 +54,7 @@ def create_doctor(doctor: DoctorCreate):
     doctors_db[next_id] = new_doctor
     next_id += 1
     return {"message": "Doctor added successfully", "doctor": new_doctor}
+
 
 @app.put("/doctors/{doctor_id}", tags=["Doctors"])
 def update_doctor(doctor_id: int, doctor: DoctorCreate):
