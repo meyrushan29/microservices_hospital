@@ -1,0 +1,15 @@
+{
+  "service": {
+    "name": "appointment-service",
+    "port": 8003,
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "type": "in-memory",
+    "initial_data": true
+  },
+  "features": {
+    "swagger": true,
+    "cors": true
+  }
+}
