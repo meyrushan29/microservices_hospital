@@ -24,6 +24,7 @@ class DoctorCreate(BaseModel):
     available: bool
     experience_years: int
 
+
 @app.get("/", tags=["Health"])
 def health():
     return {"service": "Doctor Service", "status": "running", "port": 8002}
@@ -54,6 +55,7 @@ def create_doctor(doctor: DoctorCreate):
     next_id += 1
     return {"message": "Doctor added successfully", "doctor": new_doctor}
 
+
 @app.put("/doctors/{doctor_id}", tags=["Doctors"])
 def update_doctor(doctor_id: int, doctor: DoctorCreate):
     """Update doctor details"""
@@ -61,6 +63,8 @@ def update_doctor(doctor_id: int, doctor: DoctorCreate):
         raise HTTPException(status_code=404, detail="Doctor not found")
     doctors_db[doctor_id] = {"id": doctor_id, **doctor.dict()}
     return {"message": "Doctor updated", "doctor": doctors_db[doctor_id]}
+
+
 
 @app.delete("/doctors/{doctor_id}", tags=["Doctors"])
 def delete_doctor(doctor_id: int):
