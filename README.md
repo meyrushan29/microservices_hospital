@@ -2,6 +2,8 @@
 
 ## IT4020 Assignment 2 | SLIIT | 2026
 
+<!-- Additional commit for project updates -->
+
 ---
 
 ## 📋 Assignment Overview
