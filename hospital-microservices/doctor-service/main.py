@@ -64,6 +64,8 @@ def update_doctor(doctor_id: int, doctor: DoctorCreate):
     doctors_db[doctor_id] = {"id": doctor_id, **doctor.dict()}
     return {"message": "Doctor updated", "doctor": doctors_db[doctor_id]}
 
+
+
 @app.delete("/doctors/{doctor_id}", tags=["Doctors"])
 def delete_doctor(doctor_id: int):
     """Remove a doctor"""
