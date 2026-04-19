@@ -4,7 +4,7 @@ from typing import List
 
 app = FastAPI(
     title="Appointment Service",
-    description="Microservice for managing hospital appointments",
+    description="Microservice for managing hospital appointments - Standalone Component",
     version="1.0.0",
     docs_url="/docs",
     openapi_url="/openapi.json"
